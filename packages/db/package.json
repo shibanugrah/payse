@@ -1,13 +1,18 @@
 {
   "name": "@repo/db",
   "version": "1.0.0",
-  "dependencies": {
-    "@prisma/client": "5.21.1"
+  "description": "",
+  "main": "./index.js",
+  "scripts": {
+    "test": "echp\"Error: no test specification\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "prisma": "^5.21.1"
+    "prisma": "^5.22.0"
   },
-  "exports": {
-    "./client": "./index.ts"
+  "dependencies": {
+    "@prisma/client": "^5.22.0"
   }
 }
