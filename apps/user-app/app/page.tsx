@@ -1,10 +1,11 @@
 "use client"
 
-import {useBalance} from "@repo/store/useBalance"
+import { signIn, signOut, useSession } from "next-auth/react"
+import {Appbar} from "@repo/ui/Appbar"
 
-export default function() {
-  const balance = useBalance()
+export default function Page(): JSX.Element {
+  const session = useSession();
   return <div>
-    Hey there {balance}
+    <Appbar onSignin={signIn} onSignout={signOut} user={session.data?.user}></Appbar>
   </div>
 }
