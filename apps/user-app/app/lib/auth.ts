@@ -1,5 +1,5 @@
-import db from "@repo/db/index"
-import CredentialsProvider from "next-auth/providers/credentials"
+import db from "@repo/db/client";
+import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
 
 export const authOptions = {
@@ -36,7 +36,8 @@ export const authOptions = {
                 const user = await db.user.create({
                     data: {
                         number: credentials.phone,
-                        password: hashedPassword
+                        password: hashedPassword,
+                        email: credentials.email
                     }
                 });
             
