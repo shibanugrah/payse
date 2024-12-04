@@ -39,6 +39,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           sudo docker pull satyaya/payse:latest
-          sudo docker stop web-app || true
-          sudo docker rm web-app || true
+          sudo docker stop payse || true
+          sudo docker rm payse || true
           sudo docker run -d --name payse -p 3005:3000 satyaya/payse:latest
